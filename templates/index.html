@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <img id="background" src="{{ url_for('static', filename='swiss_village.png') }}" alt="Swiss Village">
+        <img id="background" src="{{ url_for(filename='swiss_village.png') }}" alt="Swiss Village">
         <canvas id="canvas"></canvas>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
