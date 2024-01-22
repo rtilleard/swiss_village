@@ -1,22 +1,18 @@
 window.onload = function() {
-  const canvas = document.getElementById('canvas');
-  const ctx = canvas.getContext('2d');
-  const background = document.getElementById('background');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const background = document.getElementById('background');
 
-  function resizeCanvas() {
-      canvas.width = background.clientWidth;
-      canvas.height = background.clientHeight;
-  }
+    function resizeCanvas() {
+        canvas.width = background.offsetWidth;
+        canvas.height = background.offsetHeight;
+    }
 
-  // Adjust canvas size whenever the window is resized
-  window.addEventListener('resize', resizeCanvas);
+    // Adjust canvas size whenever the window is resized
+    window.addEventListener('resize', resizeCanvas);
 
-  // Initial resize
-  resizeCanvas();
-
-    // Set canvas size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Initial resize
+    resizeCanvas();
 
     let snowflakes = createSnowflakes();
 
